@@ -34,3 +34,19 @@ html+= `
     <button id="${index}" onclick="deletenote(this.id)" class="btn btn-primary">Delete Note</button>
   </div>
 </div>`;
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
