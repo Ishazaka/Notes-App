@@ -35,7 +35,34 @@ html+= `
   </div>
 </div>`;
 
+ }) ;
+  let noteselm = document.getElementById("notes");
+  if(notesObj.length != 0) {
+    noteselm.innerHTML = html;
+  }else{
+    noteselm.innerHTML = `Add Note ~ You have not saved any note yet!! ` ;
+    }
   
+}
+// function to delete notes
+function deletenote(index){
+  let notes = localStorage.getItem("notes");
+if(notes == null){
+   notesObj = [];
+}else{
+  notesObj = JSON.parse(notes);
+}
+notesObj.splice(index , 1);
+localStorage.setItem("notes" ,JSON.stringify(notesObj));
+shownotes();
+}
+
+//function to filter content
+let search = document.getElementById("searchfy");
+search.addEventListener("input",function(){
+
+let inputvalue = search.value.toLowerCase();
+let notecard = document.getElementsByClassName("notecard"); 
   
   
   
