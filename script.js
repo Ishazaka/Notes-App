@@ -1,5 +1,4 @@
 
-
  shownotes();
 let addbtn = document.getElementById('addbtn');
 
