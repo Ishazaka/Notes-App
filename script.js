@@ -59,6 +59,7 @@ shownotes();
 //function to filter content
 let search = document.getElementById("searchfy");
 search.addEventListener("input",function(){
+ console.log("i am working");
 let inputvalue = search.value.toLowerCase();
 let notecard = document.getElementsByClassName("notecard");
 Array.from(notecard).forEach(function(element){
