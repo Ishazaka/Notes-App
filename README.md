@@ -1,3 +1,3 @@
 # Notes-App
 
-https://confident-nightingale-49348b.netlify.app/ live view
+live view   https://awesome-swirles-487805.netlify.app/
