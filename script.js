@@ -51,3 +51,39 @@ html+= `
     }
   
 }
+
+
+// function to delete notes
+function deletenote(index){
+  let notes = localStorage.getItem("notes");
+if(notes == null){
+   notesObj = [];
+}else{
+  notesObj = JSON.parse(notes);
+}
+notesObj.splice(index , 1);
+localStorage.setItem("notes" ,JSON.stringify(notesObj));
+shownotes();
+}
+
+//function to filter content
+let search = document.getElementById("searchfy");
+search.addEventListener("input",function(){
+  console.log("i am working");
+let inputvalue = search.value.toLowerCase();
+let notecard = document.getElementsByClassName("notecard");
+Array.from(notecard).forEach(function(element){
+ let cardtext = element.getElementsByTagName("p")[0].innerText;
+ let cardtitle = element.getElementsByClassName("card-title")[0].innerText;
+ 
+if(cardtext.includes(inputvalue) || cardtitle.includes(inputvalue) ){
+   element.style.display = "block";
+}else{
+  element.style.display = "none";
+}
+
+})
+})
+ 
+
+
